@@ -1,0 +1,26 @@
+* ExportFig.jl
+
+Simple module based on PyPlot to produce publication-ready figures in Julia.
+
+Basic example usage is
+#+begin_src julia
+using ExportFig, PyPlot
+
+x = 0:0.01:10
+y = sin.(sqrt.(x)*(2pi))
+plot(x,y, "k", linewidth=0.5)
+xlabel(L"x", usetex="true")
+ylabel(L"\sin(2\pi\sqrt{x})", usetex="true")
+exportfig(gcf(), "example")
+#+end_src
+
+Default options are based on the old JGR format for single column figures and super tight padding (no extra space around plot):
+   - xsize=8.4 cm
+   - ysize=6.5 cm
+   - fontname="Times New Roman"
+   - fontsize=9
+   - pad=0.2
+   - w_pad=0.0
+   - h_pad=0.0
+
+At the moment I am not sure if any other font than Times will work on all systems. Arial seems to do a good job but I would prefer Helvetica (but could not make it work).
