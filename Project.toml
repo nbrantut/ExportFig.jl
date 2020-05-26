@@ -1,0 +1,7 @@
+name = "ExportFig"
+uuid = "30f7d82e-e518-49a1-b75a-478211d950e7"
+authors = ["Nicolas Brantut <nicolas.brantut@normalesup.org>"]
+version = "0.1.0"
+
+[deps]
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"

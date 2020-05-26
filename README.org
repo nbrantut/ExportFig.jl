@@ -17,10 +17,10 @@ exportfig(gcf(), "example")
 Default options are based on the old JGR format for single column figures and super tight padding (no extra space around plot):
    - xsize=8.4 cm
    - ysize=6.5 cm
-   - fontname="Times New Roman"
+   - fontname="Times"
    - fontsize=9
    - pad=0.2
    - w_pad=0.0
    - h_pad=0.0
 
-At the moment I am not sure if any other font than Times will work on all systems. Arial seems to do a good job but I would prefer Helvetica (but could not make it work).
+At the moment only two fonts work: "Times" and "Arial" (effectively using Helvetica). When using "Arial", the latex command "mathrm" is replaced by "mathsf", which is convenient. The option "usetex" should be "true" for every annotation, so that it looks good.
